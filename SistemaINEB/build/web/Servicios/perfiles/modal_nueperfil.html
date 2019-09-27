@@ -1,0 +1,62 @@
+<div class="modal fade" id="modal_nueperfil">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Editar Perfil</h4>
+      </div>
+          <div class="col-sm-3">
+                        
+                            <img ng-src="{{imagen}}" class="img-circle" alt="" width="50px" height="50px">
+                            
+                     
+                     <button class="btn btn-danger  btn-sm fa fa-upload "   ng-click="fotoModalnue('in')">. Fotografia </button>
+                   
+                </div>
+          <form  class="form-inline"   style="text-align: center; background-color: #ffffff; border-color:  #FFC414;  "    >
+                                                 
+                       <table class="form-group" style="text-align: left; margin-left: 2%; margin-right:2%;"  > 
+                           <tr><td>  <label style="width: 100px;  text-align: left;">Usuario</label>  </td><td>
+                            <input type="text"  required class="form-control" value="" placeholder="usuario" size="50" ng-model="dato.usuario">
+                            
+                            </td> 
+                        </tr><tr><td>  <label style="width: 100px;  text-align: left;">Clave</label>  </td><td>
+                            <input type="password"  required class="form-control" value="" placeholder="clave" size="50" ng-model="dato.clave">
+                            
+                            </td> 
+                        </tr><tr><td>  <label style="width: 100px;  text-align: left;">Nombre</label>  </td><td>
+                            <input type="text"  required class="form-control" value="" placeholder="Nombre" size="50" ng-model="dato.nombre">
+                            
+                            </td> 
+                        </tr><tr>     <td ><label style="width: 100px;text-align: left;">Apellido:</label></td><td>
+                                   <input type="text"  required  class="form-control" placeholder="Apellido:" value="" size="50" ng-model="dato.apellido">
+                        </td> </tr> 
+                        <tr>     <td ><label style="width: 100px;text-align: left;">Email:</label></td><td>
+                                   <input type="text"  required  class="form-control" placeholder="Email:" value="" size="50" ng-model="dato.email">
+                         </td></tr>                         
+                        <tr>     <td><label style="width: 100px;text-align: left;">Sexo:</label></td><td>
+                                   <input type="text"  required class="form-control" placeholder="Sexo:" value="" size="50" ng-model="dato.sexo">
+                        </td></tr> 
+                        <tr>     <td ><label style="width: 100px;text-align: left;">Telefono:</label></td><td>
+                                   <input type="text"  required class="form-control" placeholder="Telefono:" value="" size="50" ng-model="dato.telefono">
+                        </td></tr> 
+                        <tr>     <td ><label style="width: 100px;text-align: left;">Celular:</label></td><td>
+                                   <input type="text"  required class="form-control" placeholder="Celular:" value="" size="50" ng-model="dato.celular">
+                        </td></tr> 
+                        
+
+                     
+                      </table>
+                      <br/>                      
+                      <button ng-click="guardarnuevo(dato)" class="btn btn-success">
+                          <span class="fa fa-save" ></span> Guardar 
+                      </button> 
+                                        
+                  </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  
+      <div ng-include="'Servicios/perfiles/modal_upfotonue.html'"></div>
+</div>
